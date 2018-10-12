@@ -1,0 +1,18 @@
+{% extends 'todos/partials/base.html'%}
+
+
+{% block index %}
+
+
+
+		{% for todo in todos %}
+
+			<li> <a href="{% url 'todo:detail' todo.id %}">{{todo.title}}</a>:{{todo.text}}</li>
+
+		{% endfor %}
+
+
+{% endblock %}
+
+
+
